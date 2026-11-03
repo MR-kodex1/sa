@@ -1,0 +1,1841 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1459a8">
+  <title>الفرعون | بناء الدولة المصرية</title>
+  <style>
+
+:root {
+    --blue: #176b65;
+    --deep: #123f3c;
+    --bright: #c4933e;
+    --sky: #edf5f1;
+    --ink: #18283c;
+    --muted: #718096;
+    --line: #e8e2d4;
+    --white: #fff;
+    --font: 'Cairo', Tahoma, sans-serif
+}
+
+* {
+    box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    margin: 0;
+    background: #fff;
+    color: var(--ink);
+    font-family: var(--font);
+    line-height: 1.7
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+.topbar {
+    height: 82px;
+    padding: 0 max(calc((100vw - 1160px)/2), 6.2%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 1px solid #eee9dc
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--deep)
+}
+
+.brand-mark {
+    display: grid;
+    place-items: center;
+    width: 41px;
+    height: 41px;
+    background: var(--blue);
+    color: white;
+    border-radius: 13px 13px 13px 4px;
+    font-size: 22px;
+    font-weight: 900;
+    box-shadow: 0 7px 17px #176b6533
+}
+
+.brand strong {
+    display: block;
+    font-size: 18px;
+    line-height: 1.3
+}
+
+.brand small {
+    display: block;
+    color: #8a98aa;
+    font-size: 10px
+}
+
+.topbar nav {
+    display: flex;
+    gap: 36px;
+    font-size: 13px;
+    color: #65748a
+}
+
+.topbar nav a:hover,
+.text-link:hover {
+    color: var(--blue)
+}
+
+.nav-cta {
+    font-size: 12px;
+    color: var(--blue);
+    font-weight: 800
+}
+
+.nav-cta span {
+    margin-right: 8px
+}
+
+.hero {
+    max-width: 1160px;
+    margin: auto;
+    min-height: 535px;
+    padding: 56px 0 60px;
+    display: grid;
+    grid-template-columns: 1fr .92fr;
+    align-items: center;
+    gap: 40px
+}
+
+.hero-copy {
+    padding-right: 7px
+}
+
+.eyebrow {
+    color: var(--blue);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .1px
+}
+
+.live-dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    background: #4b9bea;
+    border-radius: 50%;
+    margin-left: 6px;
+    box-shadow: 0 0 0 4px #e4f2ff
+}
+
+.hero h1 {
+    font-size: 56px;
+    line-height: 1.25;
+    letter-spacing: -1.5px;
+    margin: 17px 0 15px;
+    font-weight: 900;
+    color: #183757
+}
+
+.hero h1 em,
+.section-heading h2 em,
+.lesson-copy h2 em {
+    font-style: normal;
+    color: var(--blue)
+}
+
+.hero-copy>p {
+    font-size: 15px;
+    color: #78889c;
+    max-width: 480px;
+    line-height: 2;
+    margin: 0
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-top: 27px
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+    border: 0;
+    border-radius: 9px;
+    padding: 12px 19px;
+    font: 700 12px var(--font);
+    cursor: pointer
+}
+
+.primary {
+    background: var(--blue);
+    color: white;
+    box-shadow: 0 8px 18px #176b6526
+}
+
+.primary:hover {
+    background: var(--deep);
+    transform: translateY(-1px)
+}
+
+.button span {
+    font-size: 17px
+}
+
+.text-link {
+    font-size: 11px;
+    font-weight: 700;
+    color: #52677f
+}
+
+.hero-note {
+    font-size: 10px;
+    color: #9aa7b6;
+    margin-top: 30px
+}
+
+.note-icon {
+    color: #c4933e;
+    font-size: 16px;
+    margin-left: 7px
+}
+
+.hero-art {
+    height: 414px;
+    position: relative;
+    border-radius: 34px;
+    background: linear-gradient(145deg, #edf6ff, #fbf8ef 64%, #f1ead8);
+    overflow: hidden;
+    display: grid;
+    place-items: center
+}
+
+.hero-art:after {
+    content: '';
+    position: absolute;
+    width: 320px;
+    height: 95px;
+    border-radius: 50%;
+    background: #e7ddc3;
+    bottom: 20px;
+    filter: blur(1px)
+}
+
+.orbit {
+    position: absolute;
+    border: 1px solid #d9cda9;
+    border-radius: 50%;
+    transform: rotate(-24deg)
+}
+
+.orbit-one {
+    width: 370px;
+    height: 190px
+}
+
+.orbit-two {
+    width: 300px;
+    height: 290px;
+    transform: rotate(35deg);
+    border-color: #e6ddc5
+}
+
+.guide-figure {
+    z-index: 1;
+    position: relative;
+    width: 205px;
+    height: 270px;
+    margin-top: 47px
+}
+
+.guide-halo {
+    position: absolute;
+    width: 183px;
+    height: 183px;
+    background: #eee4ca;
+    border-radius: 50%;
+    top: 3px;
+    left: 11px
+}
+
+.guide-face {
+    position: absolute;
+    z-index: 2;
+    top: 38px;
+    left: 51px;
+    width: 106px;
+    height: 116px;
+    border-radius: 46% 46% 43% 43%;
+    background: #e8ae81;
+    border: 3px solid #fff0e2;
+    box-shadow: inset 0 -8px #d99770
+}
+
+.hair {
+    position: absolute;
+    top: -9px;
+    left: 4px;
+    width: 95px;
+    height: 43px;
+    background: #273954;
+    border-radius: 55% 55% 30% 22%;
+    transform: rotate(-4deg)
+}
+
+.eye {
+    position: absolute;
+    top: 55px;
+    width: 6px;
+    height: 8px;
+    background: #34465a;
+    border-radius: 50%
+}
+
+.eye-one {
+    right: 28px
+}
+
+.eye-two {
+    left: 28px
+}
+
+.smile {
+    position: absolute;
+    width: 19px;
+    height: 9px;
+    border-bottom: 2px solid #8a5142;
+    border-radius: 50%;
+    top: 79px;
+    left: 42px
+}
+
+.guide-body {
+    position: absolute;
+    z-index: 2;
+    top: 145px;
+    left: 18px;
+    width: 169px;
+    height: 140px;
+    border-radius: 64px 64px 15px 15px;
+    background: #26736c;
+    border: 5px solid #fff;
+    box-shadow: 0 12px 25px #18487928
+}
+
+.collar {
+    position: absolute;
+    top: -2px;
+    left: 59px;
+    width: 42px;
+    height: 33px;
+    background: #fff;
+    clip-path: polygon(0 0, 100% 0, 52% 100%)
+}
+
+.badge {
+    position: absolute;
+    top: 51px;
+    left: 17px;
+    width: 28px;
+    height: 28px;
+    display: grid;
+    place-items: center;
+    background: #fff;
+    border-radius: 9px;
+    color: var(--blue);
+    font-weight: 900
+}
+
+.spark {
+    position: absolute;
+    color: #c4933e
+}
+
+.spark-a {
+    font-size: 25px;
+    top: 65px;
+    right: 93px
+}
+
+.spark-b {
+    font-size: 28px;
+    bottom: 106px;
+    left: 73px
+}
+
+.date-chip {
+    position: absolute;
+    top: 92px;
+    right: 56px;
+    z-index: 2;
+    background: white;
+    border-radius: 11px;
+    padding: 7px 12px;
+    box-shadow: 0 8px 22px #18487914;
+    font-size: 9px;
+    color: #8495a8
+}
+
+.date-chip strong {
+    display: block;
+    color: var(--blue);
+    font-size: 12px
+}
+
+.speech-card {
+    position: absolute;
+    z-index: 3;
+    bottom: 48px;
+    right: 27px;
+    background: white;
+    border-radius: 13px;
+    padding: 9px 13px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 9px 25px #18487919
+}
+
+.speech-icon {
+    background: #e8f3ff;
+    color: var(--blue);
+    width: 30px;
+    height: 30px;
+    border-radius: 9px;
+    display: grid;
+    place-items: center
+}
+
+.speech-card strong,
+.speech-card small {
+    display: block;
+    font-size: 10px;
+    line-height: 1.5
+}
+
+.speech-card small {
+    font-size: 8px;
+    color: #8998aa
+}
+
+.wave {
+    color: var(--bright);
+    font-size: 19px;
+    margin-right: 8px
+}
+
+.art-label {
+    position: absolute;
+    left: 27px;
+    top: 31px;
+    color: #9cb7d3;
+    font-size: 9px;
+    letter-spacing: 2px
+}
+
+.section-wrap {
+    max-width: 1160px;
+    margin: auto
+}
+
+.intro {
+    padding: 40px 0 78px
+}
+
+.section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    margin-bottom: 27px
+}
+
+.section-heading h2 {
+    font-size: 30px;
+    line-height: 1.3;
+    color: #183757;
+    margin: 6px 0 0;
+    font-weight: 900
+}
+
+.section-heading>p {
+    max-width: 360px;
+    color: #8a97a7;
+    font-size: 11px;
+    line-height: 1.9;
+    margin: 0
+}
+
+.character-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px
+}
+
+.character-card {
+    min-height: 132px;
+    padding: 18px 17px;
+    position: relative;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: #fff;
+    transition: .2s
+}
+
+.character-card:hover {
+    border-color: #b8d8f4;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px #1b57900c
+}
+
+.avatar {
+    width: 69px;
+    height: 69px;
+    border-radius: 22px;
+    display: grid;
+    place-items: center;
+    font-size: 31px;
+    flex: none
+}
+
+.avatar-narrator {
+    background: #edf5f1
+}
+
+.avatar-explorer {
+    background: #eef5ff
+}
+
+.avatar-historian {
+    background: #edf7fa
+}
+
+.role-tag {
+    font-size: 9px;
+    color: #6d9bc8;
+    font-weight: 700
+}
+
+.character-card h3 {
+    font-size: 16px;
+    margin: 0;
+    color: #203c5b
+}
+
+.character-card p {
+    font-size: 10px;
+    color: #8997a7;
+    margin: 3px 0 0
+}
+
+.card-arrow {
+    position: absolute;
+    left: 15px;
+    top: 14px;
+    color: #b4c4d5
+}
+
+.lesson-section {
+    background: #f6f2e9;
+    padding: 62px 0
+}
+
+.lesson-layout {
+    display: grid;
+    grid-template-columns: .83fr 1.17fr;
+    gap: 75px;
+    align-items: center
+}
+
+.lesson-copy {
+    padding-right: 8px
+}
+
+.light-eyebrow {
+    color: #86b9e9
+}
+
+.lesson-copy h2 {
+    font-size: 34px;
+    line-height: 1.5;
+    color: #fff;
+    margin: 9px 0 12px
+}
+
+.lesson-copy h2 em {
+    color: #e5c577
+}
+
+.lesson-copy>p {
+    font-size: 12px;
+    color: #a8bfd6;
+    line-height: 2;
+    max-width: 360px
+}
+
+.lesson-progress {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 30px;
+    color: #e0ecf8;
+    font-size: 9px
+}
+
+.progress-track {
+    width: 115px;
+    height: 4px;
+    background: #315c85;
+    border-radius: 5px
+}
+
+.progress-track i {
+    display: block;
+    width: 34%;
+    height: 100%;
+    background: #d7b45c;
+    border-radius: 5px
+}
+
+.lesson-progress b {
+    font-size: 9px;
+    color: #8ebce7
+}
+
+.lesson-section {
+    background: linear-gradient(120deg, #123f3c, #176b65)
+}
+
+.lesson-demo {
+    background: #fff;
+    border-radius: 17px;
+    padding: 22px 23px;
+    box-shadow: 0 20px 50px #06284e40;
+    min-height: 310px
+}
+
+.demo-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee9dc;
+    padding-bottom: 13px
+}
+
+.chapter-pill {
+    background: #edf5f1;
+    color: #377bb7;
+    font-size: 9px;
+    padding: 5px 10px;
+    border-radius: 20px
+}
+
+.chapter-pill i {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #5ba3e6;
+    margin-left: 5px
+}
+
+.more-dots {
+    color: #aab8c8;
+    font-size: 14px;
+    letter-spacing: 2px
+}
+
+.dialogue {
+    display: flex;
+    gap: 11px;
+    margin: 18px 0 13px
+}
+
+.mini-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 12px;
+    background: #edf5f1;
+    display: grid;
+    place-items: center
+}
+
+.bubble {
+    background: #f8f6ef;
+    border-radius: 0 12px 12px 12px;
+    padding: 8px 13px;
+    flex: 1
+}
+
+.speaker {
+    font-size: 9px;
+    color: #4b86bc;
+    font-weight: 800
+}
+
+.bubble p {
+    font-size: 11px;
+    margin: 2px 0 0;
+    color: #40556e
+}
+
+.choice-list {
+    display: grid;
+    gap: 7px;
+    margin-right: 47px
+}
+
+.choice {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    border: 1px solid #e8e2d4;
+    border-radius: 8px;
+    padding: 8px 11px;
+    text-align: right;
+    font: 600 10px var(--font);
+    color: #4e6279;
+    cursor: pointer;
+    transition: .15s
+}
+
+.choice:hover,
+.choice:focus-visible,
+.choice.selected {
+    border-color: #7eb7eb;
+    background: #f7fbff;
+    color: var(--blue)
+}
+
+.choice span {
+    color: #c4933e;
+    font-size: 15px
+}
+
+.demo-response {
+    min-height: 23px;
+    margin: 9px 47px 0;
+    color: #397ab5;
+    font-size: 10px
+}
+
+.demo-foot {
+    border-top: 1px solid #eee9dc;
+    padding-top: 11px;
+    display: flex;
+    justify-content: space-between;
+    color: #98a5b4;
+    font-size: 9px
+}
+
+.step-count {
+    letter-spacing: 4px;
+    color: #62a2dc
+}
+
+.quiz-section {
+    padding: 76px 0 80px
+}
+
+.quiz-counter {
+    font-size: 10px;
+    color: #8293a6;
+    background: #f6f2e9;
+    border-radius: 20px;
+    padding: 6px 12px
+}
+
+.quiz-card {
+    padding: 25px 28px;
+    background: #f8f6ef;
+    border: 1px solid #eee9dc;
+    border-radius: 17px;
+    display: flex;
+    gap: 19px
+}
+
+.quiz-mark {
+    width: 48px;
+    height: 48px;
+    flex: none;
+    background: #edf5f1;
+    color: var(--blue);
+    font-size: 26px;
+    font-weight: 800;
+    border-radius: 15px;
+    display: grid;
+    place-items: center
+}
+
+.quiz-content {
+    flex: 1
+}
+
+.question-label {
+    color: #6093c2;
+    font-size: 9px;
+    font-weight: 800
+}
+
+.quiz-content h3 {
+    font-size: 17px;
+    color: #274564;
+    margin: 2px 0 14px
+}
+
+.answer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px
+}
+
+.answer {
+    min-height: 44px;
+    border: 1px solid #e8e2d4;
+    border-radius: 9px;
+    padding: 8px;
+    background: white;
+    text-align: right;
+    font: 600 10px var(--font);
+    color: #65778a;
+    cursor: pointer
+}
+
+.answer:hover {
+    border-color: #7fb3e4
+}
+
+.answer.correct {
+    border-color: #64b48a;
+    background: #effaf3;
+    color: #26764a
+}
+
+.answer.wrong {
+    border-color: #e6a09c;
+    background: #fff4f3;
+    color: #ae534c
+}
+
+.answer:disabled {
+    cursor: default
+}
+
+.quiz-feedback {
+    font-size: 10px;
+    color: #4b8a68;
+    min-height: 17px;
+    margin: 8px 0 0
+}
+
+.next-button {
+    margin-top: 7px
+}
+
+.teacher {
+    background: #123f3c;
+    padding: 28px 6.2%
+}
+
+.teacher-inner {
+    max-width: 1160px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    position: relative
+}
+
+.teacher-symbol {
+    width: 57px;
+    height: 57px;
+    display: grid;
+    place-items: center;
+    border: 1px solid #6b98c4;
+    border-radius: 17px;
+    color: white;
+    font-size: 29px;
+    font-weight: 900
+}
+
+.teacher h2 {
+    color: #fff;
+    font-size: 19px;
+    margin: 2px 0 0
+}
+
+.teacher h2 span {
+    color: #e5c577;
+    font-size: 13px
+}
+
+.teacher p {
+    font-size: 10px;
+    color: #a8bfd6;
+    margin: 0
+}
+
+.teacher-decoration {
+    position: absolute;
+    left: 8px;
+    color: #d0a44b;
+    font-size: 30px
+}
+
+footer {
+    max-width: 1160px;
+    padding: 20px 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #96a3b2;
+    font-size: 9px
+}
+
+.footer-brand {
+    gap: 8px
+}
+
+.footer-brand .brand-mark {
+    width: 30px;
+    height: 30px;
+    border-radius: 9px 9px 9px 3px;
+    font-size: 16px
+}
+
+.footer-brand strong {
+    font-size: 14px
+}
+
+.back-top {
+    color: #4b83b9;
+    font-weight: 700
+}
+
+@media(max-width:1220px) {
+
+    .hero,
+    .section-wrap,
+    footer {
+        margin-left: 6.2%;
+        margin-right: 6.2%
+    }
+}
+
+@media(max-width:760px) {
+    .topbar {
+        height: 68px;
+        padding: 0 5%
+    }
+
+    .topbar nav {
+        display: none
+    }
+
+    .hero {
+        margin: 0 5%;
+        padding: 38px 0;
+        grid-template-columns: 1fr;
+        gap: 25px
+    }
+
+    .hero h1 {
+        font-size: 43px
+    }
+
+    .hero-copy>p {
+        font-size: 13px
+    }
+
+    .hero-art {
+        height: 350px;
+        grid-row: 1
+    }
+
+    .intro {
+        padding-top: 25px
+    }
+
+    .section-heading {
+        align-items: start;
+        gap: 12px;
+        flex-direction: column
+    }
+
+    .section-heading h2 {
+        font-size: 26px
+    }
+
+    .section-heading>p {
+        max-width: none
+    }
+
+    .character-grid {
+        grid-template-columns: 1fr
+    }
+
+    .character-card {
+        min-height: 106px
+    }
+
+    .lesson-section {
+        padding: 45px 0
+    }
+
+    .lesson-layout {
+        grid-template-columns: 1fr;
+        gap: 20px
+    }
+
+    .lesson-copy h2 {
+        font-size: 29px
+    }
+
+    .lesson-copy>p {
+        max-width: none
+    }
+
+    .lesson-progress {
+        margin-top: 17px
+    }
+
+    .quiz-section {
+        padding: 54px 0
+    }
+
+    .quiz-card {
+        padding: 19px 15px;
+        gap: 12px
+    }
+
+    .quiz-content h3 {
+        font-size: 14px
+    }
+
+    .answer-grid {
+        grid-template-columns: 1fr
+    }
+
+    .answer {
+        min-height: 40px
+    }
+
+    .teacher {
+        padding-left: 5%;
+        padding-right: 5%
+    }
+
+    footer {
+        margin: 0 5%;
+        gap: 12px
+    }
+
+    .footer-brand .brand-mark {
+        display: none
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+    html {
+        scroll-behavior: auto
+    }
+
+    *,
+    *:before,
+    *:after {
+        transition: none !important
+    }
+}
+
+.summary-section {
+    padding: 72px 0 77px
+}
+
+.outcome-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 13px
+}
+
+.outcome-card {
+    position: relative;
+    min-height: 155px;
+    border: 1px solid var(--line);
+    border-radius: 13px;
+    background: linear-gradient(145deg, #fff, #f8fbff);
+    padding: 20px 19px;
+    overflow: hidden
+}
+
+.outcome-card:after {
+    content: '';
+    position: absolute;
+    left: -15px;
+    bottom: -28px;
+    width: 85px;
+    height: 85px;
+    border: 1px solid #e5f1fc;
+    border-radius: 50%
+}
+
+.outcome-number {
+    font-size: 10px;
+    color: #72a8d9;
+    font-weight: 900;
+    letter-spacing: 1px
+}
+
+.outcome-card h3 {
+    font-size: 14px;
+    color: #24486c;
+    margin: 7px 0 4px
+}
+
+.outcome-card p {
+    font-size: 10px;
+    color: #7c8ca0;
+    line-height: 1.9;
+    margin: 0;
+    max-width: 300px
+}
+
+.demo-foot span:first-child {
+    max-width: 80%
+}
+
+@media(max-width:760px) {
+    .summary-section {
+        padding: 48px 0
+    }
+
+    .outcome-grid {
+        grid-template-columns: 1fr
+    }
+
+    .outcome-card {
+        min-height: 120px
+    }
+}
+
+.lesson-layout {
+    grid-template-columns: .72fr 1.28fr;
+    gap: 38px;
+    align-items: start
+}
+
+.lesson-copy {
+    position: sticky;
+    top: 110px;
+    padding-top: 28px
+}
+
+.lesson-reader {
+    min-height: 580px;
+    padding: 20px 21px
+}
+
+.lesson-duration {
+    font-size: 9px;
+    color: #8fa0b2
+}
+
+.chapter-nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px;
+    padding: 13px 0;
+    border-bottom: 1px solid #edf2f7
+}
+
+.chapter-tab {
+    border: 1px solid transparent;
+    border-radius: 7px;
+    padding: 7px 9px;
+    text-align: right;
+    background: #f8f6ef;
+    color: #64778c;
+    font: 600 9px var(--font);
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.chapter-tab:hover,
+.chapter-tab.active {
+    background: #edf5f1;
+    border-color: #c7e1f8;
+    color: #176b65
+}
+
+.chapter-content {
+    padding-top: 16px
+}
+
+.chapter-meta {
+    display: flex;
+    align-items: center;
+    gap: 9px
+}
+
+.chapter-meta .mini-avatar {
+    width: 32px;
+    height: 32px
+}
+
+.chapter-index {
+    margin-right: auto;
+    background: #f2f6fa;
+    border-radius: 15px;
+    padding: 3px 9px;
+    color: #8091a3;
+    font-size: 9px
+}
+
+.chapter-content h3 {
+    font-size: 20px;
+    color: #203f60;
+    margin: 11px 0 7px
+}
+
+.chapter-text {
+    color: #52667d;
+    font-size: 11px;
+    line-height: 2.05
+}
+
+.chapter-text p {
+    margin: 0 0 10px
+}
+
+.chapter-text ul {
+    list-style: none;
+    padding: 0;
+    margin: 9px 0 12px;
+    display: grid;
+    gap: 5px
+}
+
+.chapter-text li {
+    position: relative;
+    padding: 5px 23px 5px 8px;
+    background: #f8f6ef;
+    border-radius: 7px
+}
+
+.chapter-text li:before {
+    content: '✦';
+    position: absolute;
+    right: 8px;
+    color: #c4933e
+}
+
+.chapter-callout {
+    border-right: 3px solid #5d9fda;
+    background: #edf5f1;
+    border-radius: 0 8px 8px 0;
+    color: #456889;
+    padding: 10px 12px;
+    font-size: 10px;
+    line-height: 1.9;
+    margin: 13px 0
+}
+
+.reflection-card {
+    border: 1px solid #e7edf5;
+    border-radius: 10px;
+    padding: 12px 13px;
+    background: #fcfdff
+}
+
+.reflection-heading {
+    font-size: 10px;
+    font-weight: 800;
+    color: #2472b3
+}
+
+.reflection-card>p:first-of-type {
+    font-size: 10px;
+    color: #405773;
+    font-weight: 700;
+    margin: 4px 0 9px
+}
+
+.reflection-options {
+    display: grid;
+    gap: 6px
+}
+
+.reflection-option {
+    background: #fff;
+    border: 1px solid #e8e2d4;
+    border-radius: 7px;
+    padding: 7px 9px;
+    text-align: right;
+    font: 500 9px var(--font);
+    color: #66788c;
+    cursor: pointer
+}
+
+.reflection-option:hover {
+    border-color: #89bce7
+}
+
+.reflection-option:disabled {
+    cursor: default
+}
+
+.reflection-option.correct {
+    border-color: #65b68b;
+    background: #eff9f2;
+    color: #26764a
+}
+
+.reflection-option.wrong {
+    border-color: #e6a09c;
+    background: #fff4f3;
+    color: #ad514a
+}
+
+.reflection-feedback {
+    min-height: 0;
+    color: #4e8969;
+    font-size: 9px;
+    line-height: 1.8;
+    margin: 7px 0 0
+}
+
+.reflection-feedback:empty {
+    display: none
+}
+
+.chapter-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 14px
+}
+
+.chapter-control {
+    border: 1px solid #dfe8f2;
+    border-radius: 7px;
+    background: #fff;
+    padding: 7px 11px;
+    color: #65809a;
+    font: 700 9px var(--font);
+    cursor: pointer
+}
+
+.chapter-control:disabled {
+    opacity: .4;
+    cursor: default
+}
+
+.next-chapter {
+    background: #176b65;
+    border-color: #176b65;
+    color: #fff
+}
+
+.quiz-intro {
+    font-size: 11px;
+    color: #8291a2;
+    margin: -15px 0 16px
+}
+
+.quiz-progress {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 13px;
+    color: #718398;
+    font-size: 10px
+}
+
+.quiz-track {
+    height: 5px;
+    border-radius: 9px;
+    background: #e9f0f7;
+    flex: 1;
+    overflow: hidden
+}
+
+.quiz-track i {
+    display: block;
+    height: 100%;
+    width: 0;
+    background: #c4933e;
+    border-radius: 9px;
+    transition: width .25s
+}
+
+.quiz-card {
+    min-height: 195px
+}
+
+.quiz-feedback {
+    color: #438361;
+    line-height: 1.8
+}
+
+.answer {
+    line-height: 1.8
+}
+
+.quiz-result {
+    background: #f4f9ff;
+    border: 1px solid #e6eff8;
+    border-radius: 17px;
+    text-align: center;
+    padding: 36px 20px
+}
+
+.quiz-result[hidden],
+#quizCard[hidden] {
+    display: none
+}
+
+.result-star {
+    display: block;
+    color: #c4933e;
+    font-size: 34px
+}
+
+.quiz-result h3 {
+    font-size: 30px;
+    color: #176b65;
+    margin: 6px 0
+}
+
+.quiz-result p {
+    font-size: 12px;
+    color: #708298;
+    margin: 0 0 18px
+}
+
+@media(max-width:760px) {
+    .lesson-layout {
+        grid-template-columns: 1fr;
+        gap: 18px
+    }
+
+    .lesson-copy {
+        position: static;
+        padding-top: 0
+    }
+
+    .lesson-reader {
+        padding: 15px 13px
+    }
+
+    .chapter-nav {
+        grid-template-columns: 1fr 1fr
+    }
+
+    .chapter-tab {
+        font-size: 8px
+    }
+
+    .chapter-content h3 {
+        font-size: 18px
+    }
+
+    .quiz-intro {
+        margin-top: -8px
+    }
+
+    .quiz-progress {
+        gap: 7px
+    }
+}
+  </style>
+
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="الفرعون، الرئيسية">
+      <span class="brand-mark">ف</span>
+      <span><strong>الفرعون</strong><small>رحلة في تاريخ مصر</small></span>
+    </a>
+    <nav aria-label="التنقل الرئيسي">
+      <a href="#summary">الخلاصة</a><a href="#lesson">الشرح</a>
+      <a href="#quiz">اختبر نفسك</a>
+      <a href="#about">عن المدرس</a>
+    </nav>
+    <a class="nav-cta" href="#lesson">ابدأ التعلّم <span>←</span></a>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="live-dot"></span> الدرس الأول · الوحدة الأولى</div>
+        <h1>بناء الدولة المصرية<br><em>واستمرارها عبر التاريخ</em></h1>
+        <p>افهم أركان الدولة، واكتشف العوامل الطبيعية والبشرية اللي ساعدت مصر تقوم وتستمر عبر التاريخ.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#lesson">ابدأ أول درس <span>←</span></a>
+          <a class="text-link" href="#characters">قابل شخصيات الرحلة <span>↓</span></a>
+        </div>
+        <div class="hero-note"><span class="note-icon">✦</span> أركان الدولة · مقوماتها · سر استمرارها</div>
+      </div>
+      <div class="hero-art" aria-label="شخصية مرشد تاريخي كرتونية">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <span class="spark spark-a">✦</span><span class="spark spark-b">✧</span>
+        <div class="date-chip"><span>رحلتنا تبدأ</span><strong>من هنا</strong></div>
+        <div class="guide-figure"><div class="guide-halo"></div><div class="guide-face"><span class="hair"></span><span class="eye eye-one"></span><span class="eye eye-two"></span><span class="smile"></span></div><div class="guide-body"><span class="collar"></span><span class="badge">ف</span></div></div>
+        <div class="speech-card"><span class="speech-icon">✦</span><span><strong>الدليل</strong><small>جاهز تحكيلي؟</small></span><span class="wave">〰</span></div>
+        <span class="art-label">درس ١ · بناء الدولة المصرية</span>
+      </div>
+    </section>
+
+    <section class="lesson-section" id="lesson">
+      <div class="section-wrap lesson-layout">
+        <div class="lesson-copy"><span class="eyebrow light-eyebrow">شرح تفاعلي خطوة بخطوة</span><h2>خد وقتك في الفهم،<br><em>كل فكرة لها حكاية.</em></h2><p>اختار محورًا من فهرس الدرس. اقرأ الشرح، اسمع تعليق الشخصية، وبعدها جاوب سؤال التفكير عشان تتأكد إن الفكرة وصلت.</p><div class="lesson-progress"><span>تقدّمك في الدرس</span><div class="progress-track"><i id="chapterProgress"></i></div><b id="chapterProgressText">١ / ٨</b></div></div>
+        <div class="lesson-demo lesson-reader">
+          <div class="demo-top"><span class="chapter-pill"><i></i> الدرس الأول · بناء الدولة المصرية</span><span class="lesson-duration">٨ محاور للشرح</span></div>
+          <div class="chapter-nav" id="chapterNav" aria-label="فهرس الشرح"></div>
+          <div class="chapter-content">
+            <div class="chapter-meta"><span class="mini-avatar" id="chapterAvatar">📜</span><span class="speaker" id="chapterSpeaker">راوي · دليلك</span><span class="chapter-index" id="chapterIndex">المحور ١</span></div>
+            <h3 id="chapterTitle"></h3>
+            <div class="chapter-text" id="chapterText"></div>
+            <div class="chapter-callout" id="chapterCallout"></div>
+            <div class="reflection-card"><span class="reflection-heading">وقفة تفكير</span><p id="reflectionPrompt"></p><div class="reflection-options" id="reflectionOptions"></div><p class="reflection-feedback" id="reflectionFeedback" aria-live="polite"></p></div>
+            <div class="chapter-controls"><button class="chapter-control" id="previousChapter">المحور السابق</button><button class="chapter-control next-chapter" id="nextChapter">المحور التالي ←</button></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="intro section-wrap" id="characters">
+      <div class="section-heading">
+        <div><span class="eyebrow">رفاق الرحلة</span><h2>ثلاث شخصيات، وكل واحدة لها <em>دور</em></h2></div>
+        <p>رفاق خياليون للشرح والتفاعل، يساعدوك تفهم الفكرة وتربطها بالأمثلة التاريخية.</p>
+      </div>
+      <div class="character-grid">
+        <article class="character-card narrator"><div class="avatar avatar-narrator"><span>📜</span></div><div><span class="role-tag">الدليل</span><h3>راوي</h3><p>يرتب لك الأحداث ويحكيها ببساطة.</p></div><span class="card-arrow">↙</span></article>
+        <article class="character-card explorer"><div class="avatar avatar-explorer"><span>🧭</span></div><div><span class="role-tag">المستكشف</span><h3>ليلى</h3><p>تسأل أسئلة تخليك تلاحظ التفاصيل.</p></div><span class="card-arrow">↙</span></article>
+        <article class="character-card historian"><div class="avatar avatar-historian"><span>🏺</span></div><div><span class="role-tag">صديق الآثار</span><h3>أثَر</h3><p>يربط الحكاية بالأماكن والآثار.</p></div><span class="card-arrow">↙</span></article>
+      </div>
+    </section>
+
+    <section class="summary-section section-wrap" id="summary">
+      <div class="section-heading"><div><span class="eyebrow">الخلاصة · نواتج التعلّم</span><h2>بعد الدرس هتقدر <em>تشرح</em></h2></div><p>خلاصة مبنية على محاور الدرس وأسئلته في الكتابين.</p></div>
+      <div class="outcome-grid">
+        <article class="outcome-card"><span class="outcome-number">٠١</span><h3>تعريف الدولة وأركانها</h3><p>تشرح مفهوم الدولة الحديثة وتحدد أركانها: الشعب، الحيز الجغرافي، السلطة، والسيادة.</p></article>
+        <article class="outcome-card"><span class="outcome-number">٠٢</span><h3>دور الشعب والسلطة</h3><p>توضح مشاركة الشعب في بناء الدولة، وتفرّق بين السلطات التشريعية والتنفيذية والقضائية.</p></article>
+        <article class="outcome-card"><span class="outcome-number">٠٣</span><h3>الحيز الجغرافي والسيادة</h3><p>تحدد اليابس والمياه الإقليمية والمجال الجوي، وتشرح السيادة الداخلية والخارجية.</p></article>
+        <article class="outcome-card"><span class="outcome-number">٠٤</span><h3>مقومات قيام الدولة</h3><p>تربط الموقع والنيل والموارد الطبيعية بالتجانس البشري والحكومة المركزية والقوة العسكرية.</p></article>
+        <article class="outcome-card"><span class="outcome-number">٠٥</span><h3>أسباب الاستمرار</h3><p>تفسر كيف دعمت المقومات الزراعة والعمران والاستقرار، وساعدت على بقاء الدولة عبر العصور.</p></article>
+        <article class="outcome-card"><span class="outcome-number">٠٦</span><h3>الهوية الوطنية</h3><p>تشرح أثر اللغة والتراث والتجانس الثقافي في الحفاظ على الهوية والوحدة الوطنية.</p></article>
+      </div>
+    </section>
+
+    <section class="quiz-section section-wrap" id="quiz">
+      <div class="section-heading"><div><span class="eyebrow">بعد ما تخلص الشرح</span><h2>اختبر نفسك في <em>٢٠ سؤالًا</em></h2></div><span class="quiz-counter" id="quizCounter">سؤال ١ من ٢٠</span></div>
+      <p class="quiz-intro">اختار إجابة واحدة. هتعرف فورًا إذا كانت صح، وليه الاختيار هو الأنسب. وفي الآخر هتشوف نتيجتك وتقدر تعيد المراجعة.</p>
+      <div class="quiz-progress"><span id="scoreLabel">النتيجة: ٠</span><div class="quiz-track"><i id="quizProgressBar"></i></div><span id="quizProgressLabel">٠٪</span></div>
+      <div class="quiz-card" id="quizCard">
+        <div class="quiz-mark">؟</div><div class="quiz-content"><span class="question-label" id="questionTopic">أركان الدولة</span><h3 id="questionText"></h3><div class="answer-grid" id="answerGrid"></div><p class="quiz-feedback" id="quizFeedback" aria-live="polite"></p><button id="nextQuestion" class="button primary next-button" hidden>السؤال التالي <span>←</span></button></div>
+      </div>
+      <div class="quiz-result" id="quizResult" hidden><span class="result-star">✦</span><span class="question-label">خلصت المراجعة</span><h3 id="resultTitle"></h3><p id="resultMessage"></p><button id="restartQuiz" class="button primary">أعد حل الأسئلة <span>↻</span></button></div>
+    </section>
+
+    <section class="teacher" id="about"><div class="teacher-inner"><div class="teacher-symbol">ف</div><div><span class="eyebrow light-eyebrow">معاك في كل خطوة</span><h2>سيد الجمال <span>«الفرعون»</span></h2><p>مدرس التاريخ · شرح يحوّل المعلومة لحكاية</p></div><div class="teacher-decoration">✦</div></div></section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#home"><span class="brand-mark">ف</span><strong>الفرعون</strong></a><span>التاريخ أقرب لما نفهم حكايته.</span><a href="#home" class="back-top">فوق ↑</a></footer>
+  <script>
+const chapters = [
+  {
+    title: 'يعني إيه دولة؟', speaker: 'راوي · دليلك', icon: '📜',
+    paragraphs: [
+      'الدولة كيان سياسي منظم يعيش فيه شعب على مساحة جغرافية محددة. ينظم هذا الكيان شؤون الناس عن طريق مؤسسات وسلطة تطبّق القوانين وتحافظ على الأمن والاستقرار.',
+      'وجود أرض أو سكان وحده لا يكفي لقيام الدولة. لا بد من سلطة تدير الشؤون الداخلية والخارجية، ومن سيادة تمكّن الدولة من اتخاذ قراراتها. لذلك ترتبط أركان الدولة بعضها ببعض؛ فإذا ضعف ركن تأثرت قدرة الدولة على أداء وظائفها.'
+    ],
+    points: ['الشعب: الناس الذين ينتمون إلى الدولة ويعيشون فيها.', 'الحيز الجغرافي: المساحة التي تمارس الدولة سيادتها عليها.', 'السلطة: المؤسسات التي تدير شؤون الدولة وتنفذ القوانين.', 'السيادة: استقلال الدولة في قراراتها الداخلية والخارجية.'],
+    callout: 'فكّر فيها كبيت كبير: الناس هم أهله، والأرض هي مكانه، والمؤسسات تنظّم العيش فيه، والسيادة تعني أن قراره بيده.',
+    prompt: 'لو وُجد شعب يعيش على أرض محددة، لكن لا توجد سلطة تنظّم شؤونه، ما الركن الذي ينقصه؟', options: ['السلطة المنظمة', 'الموارد الطبيعية', 'اللغة المشتركة'], correct: 0,
+    reflection: 'السلطة تنظم شؤون الدولة وتطبّق القوانين. الموارد واللغة قد تدعمان المجتمع، لكنهما لا تحلان محل أحد أركان الدولة.'
+  },
+  {
+    title: 'الشعب: من السكان إلى المشاركة', speaker: 'ليلى · المستكشفة', icon: '🧭',
+    paragraphs: [
+      'الشعب هو مجموع المواطنين الذين ينتمون إلى الدولة. وهو ليس مجرد عدد من السكان؛ فهو مصدر السلطات، ويمارس دوره بالمشاركة في الحياة السياسية والاجتماعية والاقتصادية، كما يسهم في حماية الدولة وتنميتها.',
+      'تظهر المشاركة السياسية في اختيار الحكام وممثلي الشعب عبر الانتخابات ومتابعة أداء الحكومة من خلال ممثليهم. وتظهر المشاركة الاقتصادية في العمل والإنتاج ودفع الضرائب التي تموّل الخدمات والمشروعات العامة.',
+      'وتوضح ثورة ١٩١٩ دور الشعب في التغيير: شاركت فئات المجتمع المختلفة في مقاومة الاحتلال البريطاني، وأسهم هذا الحراك في تعزيز الوعي الوطني ووحدة المصريين حول هدف الاستقلال.'
+    ],
+    points: ['المشاركة السياسية: اختيار الممثلين ومراقبة أداء الحكومة.', 'المشاركة الاقتصادية: العمل والإنتاج والمساهمة في تمويل المشروعات العامة.', 'المشاركة المجتمعية: حماية التراث والتماسك ومساندة الوطن وقت الأزمات.'],
+    callout: 'في ثورة ١٩١٩ لم يكن الشعب متفرجًا؛ تحركت فئاته المختلفة، فصار قوة ضغط ساعدت على تغيير الأوضاع السياسية.',
+    prompt: 'أي مثال يبيّن أن دور الشعب يتجاوز وجوده العددي؟', options: ['المشاركة في الانتخابات والعمل والإنتاج', 'وجود حدود طبيعية للدولة', 'سنّ المحاكم للأحكام'], correct: 0,
+    reflection: 'المشاركة السياسية والاقتصادية والاجتماعية تجعل الشعب شريكًا في بناء الدولة وتنميتها وحمايتها.'
+  },
+  {
+    title: 'الحيز الجغرافي: أرض ومياه وسماء', speaker: 'أثَر · صديق المكان', icon: '🏺',
+    paragraphs: [
+      'الحيز الجغرافي هو الرقعة التي تعترف بها الدول الأخرى وتمارس الدولة سيادتها عليها. ويشمل اليابس الذي يعيش عليه السكان، والمياه الإقليمية، والمجال الجوي الذي يعلو اليابس والمياه.',
+      'تُقاس المياه الإقليمية عادةً بمسافة تصل إلى ١٢ ميلًا بحريًا من خط الأساس الساحلي. أما المجال الجوي فهو الفضاء فوق أرض الدولة ومياهها الإقليمية، وتُنظم الدولة حركة الطيران فيه.',
+      'لمصر حدود سياسية برية وبحرية. يذكر الدرس خط عرض ٢٢ درجة جنوبًا حدًا جنوبيًا رُسم عام ١٨٩٩، وخط طول ٢٥ درجة شرقًا حدًا غربيًا مع ليبيا رُسم عام ١٩٢٥. وعلى الشمال يمتد ساحل البحر المتوسط، وشرقًا ساحل البحر الأحمر وخليج العقبة.'
+    ],
+    points: ['اليابس: الأرض التي تقوم عليها الدولة.', 'المياه الإقليمية: نطاق بحري تمارس الدولة سيادتها عليه.', 'المجال الجوي: الفضاء الذي يعلو اليابس والمياه الإقليمية.'],
+    callout: 'لذلك لا يُسمح لطائرة بدخول المجال الجوي المصري دون تصريح، ولا لسفينة بدخول مياهه الإقليمية دون اتباع القواعد المصرية.',
+    prompt: 'طائرة أجنبية تريد عبور سماء مصر. أي ركن يفسر حق مصر في تنظيم ذلك؟', options: ['الحيز الجغرافي والسيادة عليه', 'التجانس الثقافي', 'السلطة القضائية فقط'], correct: 0,
+    reflection: 'المجال الجوي جزء من الحيز الجغرافي، والسيادة تخوّل الدولة تنظيم الدخول إليه.'
+  },
+  {
+    title: 'السلطة: مؤسسات وأدوار', speaker: 'راوي · دليلك', icon: '📜',
+    paragraphs: [
+      'السلطة هي المؤسسات الحاكمة التي تدير شؤون الدولة الداخلية والخارجية، وتضع القوانين وتنظم تنفيذها، وتحافظ على الأمن العام. وفي مصر تتوزع الاختصاصات بين سلطات تشريعية وتنفيذية وقضائية.',
+      'مجلس النواب هو المؤسسة التشريعية؛ يسن القوانين، ويقر السياسة العامة والخطة والموازنة، ويمارس الرقابة على أعمال السلطة التنفيذية. والسلطة التنفيذية، التي تضم رئيس الجمهورية والحكومة، تدير شؤون الدولة وتنفذ القوانين والسياسات.',
+      'أما السلطة القضائية فتفصل في القضايا المختلفة وتصدر أحكامها وفقًا للقانون. هذا التوزيع يوضح أن لكل سلطة اختصاصًا، وأن تنظيم العلاقة بينها يساعد على سيادة القانون والاستقرار وحماية حقوق المواطنين.'
+    ],
+    points: ['التشريعية: سنّ القوانين وإقرار الخطة والموازنة والرقابة.', 'التنفيذية: إدارة شؤون الدولة وتنفيذ القوانين والسياسات.', 'القضائية: الفصل في القضايا وإصدار الأحكام وفق القانون.'],
+    callout: 'مثال سريع: البرلمان يسن القانون، الحكومة تعمل على تنفيذه، والمحاكم تفصل في النزاع إذا اختلف الناس حول تطبيقه.',
+    prompt: 'جهة تفصل في نزاع بين مواطنين وتصدر حكمًا وفق القانون. ما نوع السلطة؟', options: ['التشريعية', 'التنفيذية', 'القضائية'], correct: 2,
+    reflection: 'الفصل في القضايا وإصدار الأحكام من اختصاص السلطة القضائية.'
+  },
+  {
+    title: 'السيادة: القرار من داخل الدولة وخارجها', speaker: 'ليلى · المستكشفة', icon: '🧭',
+    paragraphs: [
+      'السيادة هي استقلال الدولة في اتخاذ قراراتها المتعلقة بشؤونها الداخلية والخارجية دون الخضوع لسلطة أجنبية. وهي ركن أساسي؛ فالدولة التي لا تملك قرارها لا تستطيع إدارة مصالح شعبها أو حماية حدودها كما ينبغي.',
+      'السيادة الداخلية تعني حرية الدولة في سن القوانين، وحفظ الأمن، وإدارة شؤون المواطنين، وتطبيق النظام داخل حدودها. ومن أمثلتها تنظيم دخول الطائرات إلى المجال الجوي أو حماية قناة السويس ومراقبة سلامة الملاحة فيها.',
+      'أما السيادة الخارجية فتعني استقلال الدولة في علاقاتها الدولية؛ مثل إبرام المعاهدات، وإقامة العلاقات الدبلوماسية، وحماية المصالح الوطنية، وتمثيل الدولة في المنظمات الدولية.'
+    ],
+    points: ['داخلية: قوانين وأمن وإدارة شؤون المواطنين.', 'خارجية: علاقات دولية ومعاهدات وتمثيل وحماية المصالح الوطنية.', 'السلطة المنظمة والسيادة تدعمان الأمن والاستقرار وممارسة الدولة لاختصاصاتها.'],
+    callout: 'تمييز سريع: تطبيق القانون داخل مصر سيادة داخلية؛ اختيار موقف مصر في علاقة دولية سيادة خارجية.',
+    prompt: 'إبرام مصر معاهدة مع دولة أخرى مثال على أي نوع من السيادة؟', options: ['السيادة الداخلية', 'السيادة الخارجية', 'الحيز الجغرافي'], correct: 1,
+    reflection: 'المعاهدات والعلاقات مع الدول تدخل ضمن السيادة الخارجية.'
+  },
+  {
+    title: 'الموقع والحدود الطبيعية', speaker: 'أثَر · صديق المكان', icon: '🏺',
+    paragraphs: [
+      'تقع مصر في قلب قارات العالم القديم، عند ملتقى أفريقيا وآسيا وأوروبا. منحها هذا الموقع فرصة للتواصل الحضاري والتبادل التجاري بين الشعوب، فكان عاملًا مهمًا في قيامها واستمرارها.',
+      'والحدود الطبيعية مثل الصحارى والبحار ساعدت على حماية قلب الدولة، ولا سيما وادي النيل والدلتا. كما وفر الموقع مجالًا للتبادل والتواصل بدل أن تكون مصر معزولة؛ فوصفها الدرس بأنها دولة «برزخ» تصل بين مناطق وقارات.',
+      'ساعد الموقع الجغرافي أيضًا على استقرار المجتمع المصري عبر التاريخ، إذ أتاح التركيز على الزراعة والعمران وتنظيم شؤون الحياة حول النيل، ودعم نشأة الدولة وترسيخ مؤسساتها.'
+    ],
+    points: ['مصر ملتقى قارات أفريقيا وآسيا وأوروبا.', 'الموقع دعم التواصل الحضاري والتبادل التجاري.', 'الحدود الطبيعية ساعدت على حماية قلب الدولة واستقرارها.'],
+    callout: 'الموقع ليس مجرد مكان على الخريطة: فهو يؤثر في الاتصال والتجارة والحماية وطريقة استقرار السكان.',
+    prompt: 'ما الأثر الذي يفسر وصف مصر بأنها ملتقى للقارات؟', options: ['ساعد موقعها على التواصل الحضاري والتجاري', 'جعلها معزولة عن الشعوب', 'ألغى الحاجة إلى موارد طبيعية'], correct: 0,
+    reflection: 'موقع مصر عند ملتقى القارات جعلها مركزًا للتواصل والتبادل بين الشعوب.'
+  },
+  {
+    title: 'النيل والموارد: أساس الاستقرار', speaker: 'أثَر · صديق المكان', icon: '🏺',
+    paragraphs: [
+      'كان نهر النيل أهم مورد طبيعي في مصر، ومصدرًا للمياه التي اعتمدت عليها الزراعة والحياة. وعلى امتداد التاريخ ساعد النيل على استقرار السكان، وربط الشمال بالجنوب، وأسهم في قيام الحضارة المصرية.',
+      'تحول المصريون من جمع الثمار إلى الزراعة المستقرة، لكن الزراعة احتاجت إلى تنظيم الري وبناء السدود وتوزيع المياه. كما تطلبت حل النزاعات بين الأقاليم؛ لذلك برزت الحاجة إلى سلطة مركزية قوية تنظم العمل الجماعي.',
+      'وإلى جانب النيل، تمتلك مصر أراضي خصبة ومعادن وأحجار بناء وموارد أخرى. ساعدت هذه الموارد على تنشيط الزراعة والصناعة والتجارة، ووفرت مقومات اقتصادية دعمت ازدهار المجتمع واستمرار الدولة.'
+    ],
+    points: ['النيل: مياه وزراعة واتصال بين الشمال والجنوب.', 'تنظيم الري وتوزيع المياه يحتاج إلى تعاون ومؤسسات.', 'الأراضي الخصبة والمعادن وأحجار البناء تدعم الإنتاج والعمران.'],
+    callout: 'سلسلة السبب والنتيجة: النيل يدعم الزراعة؛ الزراعة تحتاج تنظيمًا للري؛ التنظيم يحتاج سلطة قادرة على تنسيق الجهود.',
+    prompt: 'لماذا ساعد النيل على ظهور سلطة مركزية قوية؟', options: ['الحاجة إلى تنظيم الري وتوزيع المياه وحل النزاعات', 'لأن النيل منع الناس من الزراعة', 'لأن الموارد لم تكن موجودة'], correct: 0,
+    reflection: 'إدارة المياه والري والعمل الجماعي بين الأقاليم احتاجت إلى سلطة تنظّم وتنسّق.'
+  },
+  {
+    title: 'العوامل البشرية والهوية الوطنية', speaker: 'ليلى · المستكشفة', icon: '🧭',
+    paragraphs: [
+      'تقوم الدولة وتستمر بتفاعل عوامل بشرية إلى جانب الموقع والنهر. فالتجانس البشري والثقافي بين المصريين ساعد على تكوين مجتمع مترابط، وعلى جعل الوحدة السياسية أمرًا طبيعيًا، رغم اختلاف العصور والحكام.',
+      'وكان توحيد القطرين على يد الملك مينا (نعرمر) أساسًا لقيام حكومة مركزية قوية؛ فتحولت تجمعات صغيرة إلى دولة ذات سلطة واحدة ونظام إداري موحد. كما أسهمت القوة العسكرية في حماية الحدود والدفاع عن البلاد وصون إنجازاتها.',
+      'وحافظ المصريون على هويتهم الوطنية عبر اللغة والثقافة والتراث. تعاقبت لغات ومراحل تاريخية: المصرية القديمة، ثم القبطية في فترة الحكم الروماني وانتشار المسيحية، ثم انتشرت العربية بعد الفتح الإسلامي واستمرت لغة المجتمع. ويُعد الحفاظ على التراث والاحتفال بالمناسبات ودعم الثقافة والفنون من وسائل حماية الهوية.'
+    ],
+    points: ['التجانس والثقافة المشتركة يدعمان الوحدة الوطنية.', 'الحكومة المركزية تنظّم الدولة وتوحّد إدارتها.', 'القوة العسكرية تحمي الحدود، واللغة والتراث يحافظان على الهوية.'],
+    callout: 'استمرار الدولة ليس عاملًا واحدًا؛ الموقع والنيل والموارد والمؤسسات والجيش ووحدة المجتمع والهوية تتساند عبر الزمن.',
+    prompt: 'أي مجموعة تضم عوامل بشرية ساعدت على قيام الدولة واستمرارها؟', options: ['التجانس البشري والحكومة المركزية والقوة العسكرية', 'المياه الإقليمية والمجال الجوي فقط', 'الموقع الجغرافي وحده'], correct: 0,
+    reflection: 'هذه مقومات بشرية؛ أما الموقع والحدود والنيل والموارد الطبيعية فتُعد مقومات طبيعية.'
+  }
+];
+
+let chapterIndex = 0;
+const chapterNav = document.getElementById('chapterNav');
+const chapterTitle = document.getElementById('chapterTitle');
+const chapterText = document.getElementById('chapterText');
+const chapterCallout = document.getElementById('chapterCallout');
+const reflectionPrompt = document.getElementById('reflectionPrompt');
+const reflectionOptions = document.getElementById('reflectionOptions');
+const reflectionFeedback = document.getElementById('reflectionFeedback');
+
+function renderChapter() {
+  const chapter = chapters[chapterIndex];
+  document.getElementById('chapterSpeaker').textContent = chapter.speaker;
+  document.getElementById('chapterAvatar').textContent = chapter.icon;
+  document.getElementById('chapterIndex').textContent = `المحور ${['١','٢','٣','٤','٥','٦','٧','٨'][chapterIndex]}`;
+  chapterTitle.textContent = chapter.title;
+  chapterText.replaceChildren();
+  chapter.paragraphs.forEach(text => {
+    const paragraph = document.createElement('p');
+    paragraph.textContent = text;
+    chapterText.append(paragraph);
+  });
+  const list = document.createElement('ul');
+  chapter.points.forEach(text => {
+    const item = document.createElement('li');
+    item.textContent = text;
+    list.append(item);
+  });
+  chapterText.append(list);
+  chapterCallout.textContent = chapter.callout;
+  reflectionPrompt.textContent = chapter.prompt;
+  reflectionFeedback.textContent = '';
+  reflectionOptions.replaceChildren();
+  chapter.options.forEach((option, index) => {
+    const button = document.createElement('button');
+    button.className = 'reflection-option';
+    button.textContent = option;
+    button.addEventListener('click', () => {
+      if (reflectionOptions.dataset.answered === 'true') return;
+      reflectionOptions.dataset.answered = 'true';
+      [...reflectionOptions.children].forEach((choice, choiceIndex) => {
+        choice.disabled = true;
+        if (choiceIndex === chapter.correct) choice.classList.add('correct');
+      });
+      if (index !== chapter.correct) button.classList.add('wrong');
+      reflectionFeedback.textContent = chapter.reflection;
+    });
+    reflectionOptions.append(button);
+  });
+  reflectionOptions.dataset.answered = 'false';
+  chapterNav.replaceChildren();
+  chapters.forEach((item, index) => {
+    const button = document.createElement('button');
+    button.className = `chapter-tab${index === chapterIndex ? ' active' : ''}`;
+    button.textContent = `${['١','٢','٣','٤','٥','٦','٧','٨'][index]} · ${item.title}`;
+    button.setAttribute('aria-current', index === chapterIndex ? 'step' : 'false');
+    button.addEventListener('click', () => { chapterIndex = index; renderChapter(); });
+    chapterNav.append(button);
+  });
+  document.getElementById('chapterProgress').style.width = `${((chapterIndex + 1) / chapters.length) * 100}%`;
+  document.getElementById('chapterProgressText').textContent = `${['١','٢','٣','٤','٥','٦','٧','٨'][chapterIndex]} / ٨`;
+  document.getElementById('previousChapter').disabled = chapterIndex === 0;
+  const next = document.getElementById('nextChapter');
+  next.textContent = chapterIndex === chapters.length - 1 ? 'ارجع لأول محور ↻' : 'المحور التالي ←';
+}
+
+document.getElementById('previousChapter').addEventListener('click', () => {
+  if (chapterIndex > 0) { chapterIndex--; renderChapter(); }
+});
+document.getElementById('nextChapter').addEventListener('click', () => {
+  chapterIndex = chapterIndex === chapters.length - 1 ? 0 : chapterIndex + 1;
+  renderChapter();
+});
+renderChapter();
+
+const questions = [
+  { topic: 'أركان الدولة', text: 'كل ما يأتي يُعدّ ركنًا من أركان الدولة، ما عدا...', answers: ['وجود الشعب', 'الحيز الجغرافي', 'امتلاك السيادة', 'الهوية القومية'], correct: 3, explain: 'أركان الدولة الأربعة هي الشعب والحيز الجغرافي والسلطة والسيادة.' },
+  { topic: 'السيادة والحيز الجغرافي', text: 'أي موقف يمثّل تطبيقًا مباشرًا لسيادة الدولة على حيزها الجغرافي؟', answers: ['تنظيم دخول الطائرات إلى المجال الجوي بإذن رسمي', 'مشاركة المواطنين في الانتخابات', 'الحفاظ على التراث الثقافي', 'دفع الضرائب لتمويل المشروعات العامة'], correct: 0, explain: 'المجال الجوي جزء من الحيز الجغرافي، والدولة تنظّم دخوله وتحمي سيادتها عليه.' },
+  { topic: 'دور الشعب', text: 'جميع العبارات الآتية تعبّر عن دور الشعب، ما عدا...', answers: ['المشاركة الإيجابية في خدمة المجتمع', 'الإسهام في الحفاظ على الهوية الوطنية', 'إصدار الأحكام القضائية', 'المشاركة في بناء الدولة وتنميتها'], correct: 2, explain: 'إصدار الأحكام القضائية من اختصاص السلطة القضائية، وليس من أدوار الشعب بوصفه ركنًا للدولة.' },
+  { topic: 'السيادة على الحدود', text: 'أي موقف مما يأتي لا يُعدّ انتهاكًا لسيادة مصر؟', answers: ['دخول سفن إلى مياهها دون موافقة', 'تحليق طائرات ليبية غرب خط طول ٢٥ شرقًا', 'تحليق طائرات شمال خط عرض ٢٢ دون تصريح', 'التنقيب عن موارد مصر المعدنية دون اتفاق'], correct: 1, explain: 'خط طول ٢٥ شرقًا يحدد الحد الغربي لمصر مع ليبيا؛ الطيران غرب هذا الخط يكون خارج المجال الجوي المصري.' },
+  { topic: 'السلطة التشريعية', text: 'الرقابة على أعمال الحكومة وظيفة أساسية لأي سلطة؟', answers: ['التشريعية', 'التنفيذية', 'القضائية'], correct: 0, explain: 'مجلس النواب يمارس الرقابة على أعمال السلطة التنفيذية، إلى جانب اختصاصه التشريعي.' },
+  { topic: 'الموقع الجغرافي', text: 'كيف أسهم موقع مصر في قيام الدولة واستمرارها؟', answers: ['جعلها مركزًا للتواصل الحضاري والتبادل التجاري', 'عزلها عن شعوب العالم القديم', 'منع استقرار السكان حول النيل'], correct: 0, explain: 'موقع مصر عند ملتقى قارات العالم القديم أتاح التواصل والتبادل التجاري والحضاري.' },
+  { topic: 'الحدود الطبيعية', text: 'ما الدور الذي قامت به الحواجز الطبيعية في مصر؟', answers: ['حماية قلب الدولة، وخاصة الوادي والدلتا', 'إلغاء الحاجة إلى سلطة منظمة', 'منع المصريين من الزراعة والعمران'], correct: 0, explain: 'ساعدت الحواجز الطبيعية على حماية قلب الدولة، الوادي والدلتا، من الأخطار الخارجية.' },
+  { topic: 'نهر النيل', text: 'كيف ارتبطت الحاجة إلى تنظيم الري بظهور سلطة مركزية؟', answers: ['احتاج توزيع المياه وحل النزاعات بين الأقاليم إلى تنظيم مركزي', 'ألغى النيل الحاجة إلى التعاون بين السكان', 'أدى النيل إلى توقف الزراعة'], correct: 0, explain: 'الري وتوزيع المياه وبناء السدود والعمل الجماعي تطلبت سلطة قوية تنظم الجهود.' },
+  { topic: 'الحيز الجغرافي', text: 'ما المكونات الثلاثة للحيز الجغرافي للدولة؟', answers: ['اليابس والمياه الإقليمية والمجال الجوي', 'الشعب والسلطة والسيادة', 'الأنهار والجبال والموارد فقط'], correct: 0, explain: 'يشمل الحيز الجغرافي اليابس والمياه الإقليمية والمجال الجوي الذي يعلوهما.' },
+  { topic: 'المياه الإقليمية', text: 'إلى أي مسافة تمتد المياه الإقليمية غالبًا من خط الأساس الساحلي وفق الدرس؟', answers: ['١٢ ميلًا بحريًا', '٢٢ ميلًا بحريًا', '٢٥ ميلًا بحريًا'], correct: 0, explain: 'ورد في الدرس أن المياه الإقليمية تمتد غالبًا لمسافة ١٢ ميلًا بحريًا من خط الأساس للساحل.' },
+  { topic: 'السيادة الداخلية والخارجية', text: 'أي مما يأتي مثال على السيادة الخارجية؟', answers: ['إبرام المعاهدات وإقامة العلاقات الدبلوماسية', 'سن القوانين وحفظ الأمن داخل البلاد', 'إدارة شؤون المواطنين اليومية'], correct: 0, explain: 'السيادة الخارجية تشمل استقلال الدولة في علاقاتها الدولية وإبرام المعاهدات وحماية مصالحها.' },
+  { topic: 'الحدود السياسية', text: 'وفق الدرس، ما خط العرض الذي يمثل جزءًا من الحد الجنوبي لمصر؟', answers: ['٢٢ درجة جنوبًا', '٢٥ درجة شرقًا', '١٢ ميلًا بحريًا'], correct: 0, explain: 'يذكر الدرس أن الحد الجنوبي رُسم عند دائرة عرض ٢٢ درجة جنوبًا عام ١٨٩٩.' },
+  { topic: 'مصر دولة برزخ', text: 'ماذا يعني وصف مصر بأنها دولة «برزخ»؟', answers: ['حلقة وصل وممر بين بحار وقارات', 'دولة منعزلة لا تتصل بغيرها', 'دولة تعتمد على مورد واحد فقط'], correct: 0, explain: 'موقع مصر يصل بين البحرين الأحمر والمتوسط وبين قارات أفريقيا وآسيا وأوروبا.' },
+  { topic: 'النيل والزراعة', text: 'ما الذي ساعد المصريين على الانتقال إلى الزراعة المستقرة حول النيل؟', answers: ['المياه التي دعمت الزراعة، مع تنظيم الري وتوزيعها', 'غياب الحاجة إلى تنظيم الموارد', 'الاعتماد على التجارة البحرية وحدها'], correct: 0, explain: 'وفّر النيل المياه، لكن الزراعة المستقرة احتاجت إلى تنظيم الري وتوزيع المياه.' },
+  { topic: 'الموارد الطبيعية', text: 'أي مجموعة من الموارد الطبيعية دعمت أنشطة الاقتصاد المصري؟', answers: ['الأراضي الخصبة والمعادن وأحجار البناء', 'الانتخابات والمعاهدات الدبلوماسية', 'المحاكم والقوانين'], correct: 0, explain: 'دعمت الأراضي الخصبة والمعادن وأحجار البناء الزراعة والصناعة والتجارة والعمران.' },
+  { topic: 'الحكومة المركزية', text: 'ما النتيجة التي ترتبت على توحيد القطرين على يد الملك مينا (نعرمر)؟', answers: ['قيام حكومة مركزية قوية وإدارة موحدة', 'اختفاء دور السلطة في تنظيم الدولة', 'انقسام الدولة إلى تجمعات أصغر'], correct: 0, explain: 'ارتبط توحيد القطرين بقيام حكومة مركزية قوية وسلطة واحدة ونظام إداري موحد.' },
+  { topic: 'التجانس البشري', text: 'كيف يدعم التجانس الثقافي وحدة الدولة؟', answers: ['يعزز الترابط والانتماء والهوية المشتركة', 'يلغي الحاجة إلى مشاركة المواطنين', 'يحوّل السيادة الداخلية إلى سيادة خارجية'], correct: 0, explain: 'ساعد التجانس الثقافي على تماسك المجتمع وجعل الوحدة السياسية أمرًا طبيعيًا.' },
+  { topic: 'دور الشعب في ١٩١٩', text: 'ماذا تُظهر مشاركة فئات المجتمع في ثورة ١٩١٩؟', answers: ['قدرة الشعب على مقاومة الاحتلال وتعزيز الوعي الوطني', 'أن حماية الوطن مسؤولية الجيش وحده', 'أن الشعب لا يؤثر في الأوضاع السياسية'], correct: 0, explain: 'جسدت الثورة مشاركة الشعب في مقاومة الاحتلال البريطاني وتعزيز الوعي والوحدة الوطنية.' },
+  { topic: 'الهوية الوطنية', text: 'أي عمل يساعد على الحفاظ على الهوية الوطنية كما ورد في الدرس؟', answers: ['حماية التراث وتعريف الأجيال بتاريخ مصر ودعم الثقافة والفنون', 'إهمال التراث والمناسبات الوطنية', 'منع المؤسسات الثقافية من أداء دورها'], correct: 0, explain: 'من وسائل الحفاظ على الهوية حماية التراث، وتعريف الأجيال بتاريخ مصر، ودعم الثقافة والفنون.' },
+  { topic: 'مؤسسات الدولة', text: 'أي ترتيب يوضح اختصاصات السلطات الثلاث بشكل صحيح؟', answers: ['النواب يسنّ القوانين، والحكومة تنفّذها، والمحاكم تفصل في القضايا', 'المحاكم تضع الموازنة، والنواب ينفذون الأحكام، والحكومة تقضي بين الناس', 'الحكومة تصدر الأحكام القضائية، والمحاكم تدير شؤون الدولة'], correct: 0, explain: 'السلطة التشريعية تسن القوانين، والتنفيذية تدير الدولة وتنفذها، والقضائية تفصل في القضايا.' }
+];
+
+let questionIndex = 0;
+let answered = false;
+let score = 0;
+const quizCounter = document.getElementById('quizCounter');
+const questionText = document.getElementById('questionText');
+const questionTopic = document.getElementById('questionTopic');
+const answerGrid = document.getElementById('answerGrid');
+const quizFeedback = document.getElementById('quizFeedback');
+const nextQuestion = document.getElementById('nextQuestion');
+
+function renderQuestion() {
+  const question = questions[questionIndex];
+  answered = false;
+  quizCounter.textContent = `سؤال ${questionIndex + 1} من ${questions.length}`;
+  questionTopic.textContent = question.topic;
+  questionText.textContent = question.text;
+  quizFeedback.textContent = '';
+  nextQuestion.hidden = true;
+  answerGrid.replaceChildren();
+  question.answers.forEach((answer, index) => {
+    const button = document.createElement('button');
+    button.className = 'answer';
+    button.textContent = answer;
+    button.addEventListener('click', () => chooseAnswer(button, index));
+    answerGrid.append(button);
+  });
+  document.getElementById('scoreLabel').textContent = `النتيجة: ${score}`;
+  const progress = Math.round((questionIndex / questions.length) * 100);
+  document.getElementById('quizProgressBar').style.width = `${progress}%`;
+  document.getElementById('quizProgressLabel').textContent = `${progress}٪`;
+}
+
+function chooseAnswer(button, selectedIndex) {
+  if (answered) return;
+  answered = true;
+  const question = questions[questionIndex];
+  [...answerGrid.children].forEach((option, index) => {
+    option.disabled = true;
+    if (index === question.correct) option.classList.add('correct');
+  });
+  if (selectedIndex === question.correct) {
+    score++;
+    quizFeedback.textContent = `إجابة صحيحة. ${question.explain}`;
+  } else {
+    button.classList.add('wrong');
+    quizFeedback.textContent = `الإجابة الصحيحة اتحددت. ${question.explain}`;
+  }
+  document.getElementById('scoreLabel').textContent = `النتيجة: ${score}`;
+  nextQuestion.textContent = questionIndex === questions.length - 1 ? 'اعرض نتيجتي' : 'السؤال التالي ←';
+  nextQuestion.hidden = false;
+}
+
+nextQuestion.addEventListener('click', () => {
+  if (!answered) return;
+  if (questionIndex < questions.length - 1) {
+    questionIndex++;
+    renderQuestion();
+    return;
+  }
+  document.getElementById('quizCard').hidden = true;
+  document.getElementById('quizResult').hidden = false;
+  quizCounter.textContent = 'اكتملت الأسئلة';
+  document.getElementById('quizProgressBar').style.width = '100%';
+  document.getElementById('quizProgressLabel').textContent = '١٠٠٪';
+  document.getElementById('resultTitle').textContent = `${score} من ${questions.length}`;
+  const message = score >= 16 ? 'ممتاز! واضح إنك رابط بين أركان الدولة ومقومات استمرارها.' : score >= 10 ? 'شغل كويس. ارجع للمحاور اللي محتاجة مراجعة وجرب تاني.' : 'راجع الشرح على مهل، وبعدها أعد الأسئلة. كل محاولة هتثبت المعلومة.';
+  document.getElementById('resultMessage').textContent = message;
+});
+
+document.getElementById('restartQuiz').addEventListener('click', () => {
+  score = 0;
+  questionIndex = 0;
+  document.getElementById('quizCard').hidden = false;
+  document.getElementById('quizResult').hidden = true;
+  nextQuestion.textContent = 'السؤال التالي ←';
+  renderQuestion();
+});
+renderQuestion();
+
+  </script>
+</body>
+</html>
